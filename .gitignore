@@ -1,0 +1,24 @@
+*.class
+*.dep
+*.html
+*.pdf
+*.zip
+*.swp
+*.iml
+*.bin
+.idea
+.npm
+.npm-install
+.tsc
+.tsc-compile
+tests.zip
+node_modules/
+leaderboard/*.js
+.DS_Store
+.vscode
+go.work
+
+# Scala
+.metals
+.scala-build
+*.jar
