@@ -1,4 +1,4 @@
-# Lucid Programming Competition 2023
+# Lucid Programming Competition 2024
 
 ## Adding a Problem
 Create a new folder for your problem, as in `problems/yourProblemName`
