@@ -70,7 +70,7 @@ Under the rules, no other order of strokes is allowed.
 
 The input consists of a single line of input indicating how many swimmers you have, followed by a line of input for each swimmer.
 Each swimmer will have four numbers representing that swimmer's fastest ever time (in seconds) swimming 100m of the stroke at 100% effort.
-The times are always given in the exact order of Butterfly, Backstroke, Breaststroke, Freestye.
+The times are always given in the exact order of Butterfly, Backstroke, Breaststroke, Freestyle.
 
 ```
 <Number of Swimmers>
@@ -91,6 +91,10 @@ The predicted time should be in seconds and rounded to the nearest hundredth pla
 
 ```
 <Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
+<Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
+<Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
+<Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
+...
 ```
 
 # Examples
