@@ -10,10 +10,9 @@ As each swimmer has a unique balance of skills and strengths in each of the four
 
 Help the swimmers at the 2024 Lucid Summer Games out by computing a recommended target pace for each 100m leg of the race that will yield the fastest possible overall time for each swimmer.
 
-### Did you know?
-The current world record holder in the Men's 400m IM is Léon Marchand, a computer science major. Perhaps his coding expertise gave him a competitive advantage?
+**Did you know?** The current world record holder in the 400 IM is Léon Marchand, a computer science major. Perhaps his coding expertise gave him a competitive advantage?
 
-## Details, Details, Details
+### Details
 
 For the purposes of this challenge, you will use a simplified rules-based human performance model.
 
@@ -59,12 +58,13 @@ You must be strategic about choosing an ideal effort level for each 100m leg of 
 The fatigue penalty applies only to the _following_ legs of the race; it does not apply to the leg itself.
 You must correctly account for _all_ applicable penalties that have accumulated when computing the total penalty.
 Penalties are cumulative against each other.
-For example, as you can see from the table, the progressive fatigue penalty of swimming at 100% exertion level is 25%.
-If you were to exert 100% effort level on the butterfly, backstroke, and breaststroke legs, a 95.3125% fatigue penalty would apply for the freestyle leg of the race.
+For example, as you can see from the table, the progressive fatigue penalty of swimming at 100% exertion level is 10%.
+If you were to exert 100% effort level on the butterfly, backstroke, and breaststroke legs, a 33.1% fatigue penalty would accumulate for the freestyle leg of the race.
 
 ### Order of Strokes
 The order of strokes in the Individual Medley is always Butterfly, Backstroke, Breaststroke, Freestyle.
-Under the rules, no other order of strokes is allowed.
+
+No other order of strokes is allowed.
 
 # Input
 
