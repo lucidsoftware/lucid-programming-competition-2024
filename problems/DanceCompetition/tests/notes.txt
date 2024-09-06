@@ -1,0 +1,11 @@
+3: dancer matches themself
+4: N = 1 and everyone matches
+5: N = 1 and no one matches
+1: no one matches
+6: dancers match in multiple ways
+6: different length of routines
+7: no routine is long enough to copy
+8: routines of length 1
+stress test
+
+double check N is correct for all tests
