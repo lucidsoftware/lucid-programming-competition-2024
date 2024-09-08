@@ -1,1 +1,2 @@
-./python3-ken/main.py
+#!/bin/bash
+python3 $(dirname $(realpath $0))/python3-ken/main.py

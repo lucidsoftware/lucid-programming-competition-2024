@@ -10,7 +10,7 @@ As each swimmer has a unique balance of skills and strengths in each of the four
 
 Help the swimmers at the 2024 Lucid Summer Games out by computing a recommended target pace for each 100m leg of the race that will yield the fastest possible overall time for each swimmer.
 
-**Did you know?** The current world record holder in the 400 IM is Léon Marchand, a computer science major. Perhaps his coding expertise gave him a competitive advantage?
+**Did you know?** The current world record holder in the 400 IM is Léon Marchand, a computer science major. No doubt swimming is just one of many floating point operations he is an expert in.
 
 ### Details
 
@@ -48,8 +48,8 @@ You must be strategic about choosing an ideal effort level for each 100m leg of 
 
 ```
 75% effort => 1.5% fatigue penalty on all following legs
-80% effort => 2.5% fatigue penalty on all following legs
-85% effort => 3.5% fatigue penalty on all following legs
+80% effort => 2.2% fatigue penalty on all following legs
+85% effort => 3.2% fatigue penalty on all following legs
 90% effort => 4.5% fatigue penalty on all following legs
 95% effort => 6.0% fatigue penalty on all following legs
 100% effort => 10% fatigue penalty on all following legs
@@ -81,13 +81,13 @@ The `<time>` inputs are given in number of seconds rounded to two decimal places
 Our input always includes exactly two digits to the right of the decimal, for example: `60.00`, `75.31`, `115.20`.
 
 # Constraints
-* The number of swimmers will always be between 1 and 1000
-* The input times in seconds will be between 0.01 and 1000.00
+* The number of swimmers will always be between 1 and 50000
+* The input times in seconds will be between 1.00 and 1000.00
 
 # Output
 For each swimmer, you should output the four recommended effort levels for each stroke followed by the predicted fastest possible time they could swim the 400 IM using the predictive model described above.
 The effort level must be one of these numbers: `{75, 80, 85, 90, 95, 100}`. You should omit the `%` sign.
-The predicted time should be in seconds and rounded to the nearest hundredth place. Similar to the input format, you should always include exactly two digits to the right of the decimal.
+The predicted time should be measured in seconds and rounded to the nearest _tenth_ of a second (a single digit to the right of the decimal).
 
 ```
 <Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
