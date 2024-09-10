@@ -13,7 +13,7 @@ public class Solution {
         for (int day : days) {
             // remove expired ticket
             while (!sevenDays.isEmpty() && sevenDays.peekFirst()[0] <= day - 7) sevenDays.pollFirst();
-            while (!thirtyDays.isEmpty() && thirtyDays.peekFirst()[1] <= day - 30) thirtyDays.pollFirst();
+            while (!thirtyDays.isEmpty() && thirtyDays.peekFirst()[0] <= day - 30) thirtyDays.pollFirst();
 
             // purchase new ticket
             sevenDays.offerLast(new int[]{day, totalCost + costs[1]});
