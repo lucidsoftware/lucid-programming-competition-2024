@@ -9,10 +9,11 @@ The first line of the input will contain 3 integers, `A`, the number of competit
 **Example Input**
 
 ```
-3 5 3
-Alice 2,3 1,1 0,-1 -2,3 -1,0
-Bob -1,-2 0,2 3,-3 1,0 -2,1
-Charlie 0,0 1,1 -1,-1 2,-2 -3,3
+2 5 5
+Alice -8,0 -7,0 -6,0 -5,0 -4,0
+Bob 1,1 3,1 2,3 4,4 1,2
+Carl -1,1 -2,-2 -1,2 2,-1 0,0
+Darcy -1,-1 1,1 -1,1 1,-1 0,0
 ```
 
 ## Constraint
@@ -29,8 +30,5 @@ The expected output are lines of names that completed the challange. If no compe
 **Example Output**
 
 ```
-Jimmy
-Jenny
-James
-Jessica
+Darcy
 ```
