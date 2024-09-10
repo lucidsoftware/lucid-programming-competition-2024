@@ -17,6 +17,7 @@ leaderboard/*.js
 .DS_Store
 .vscode
 go.work
+__pycache__/
 
 # Scala
 .metals
