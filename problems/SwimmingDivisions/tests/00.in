@@ -1,0 +1,73 @@
+8
+alice
+bob
+charlie
+diana
+emily
+frank
+grace
+harry
+COMPETITION 3
+bob
+alice
+charlie
+REQUEST bob
+REQUEST charlie
+COMPETITION 3
+frank
+diana
+emily
+REQUEST alice
+REQUEST diana
+COMPETITION 2
+grace
+harry
+REQUEST harry
+COMPETITION 4
+emily
+diana
+bob
+charlie
+REQUEST alice
+REQUEST frank
+COMPETITION 8
+diana
+alice
+grace
+bob
+harry
+charlie
+emily
+frank
+REQUEST alice
+REQUEST frank
+COMPETITION 8
+harry
+charlie
+emily
+frank
+diana
+alice
+grace
+bob
+REQUEST harry
+REQUEST frank
+COMPETITION 8
+emily
+frank
+diana
+harry
+charlie
+alice
+grace
+bob
+REQUEST bob
+COMPETITION 2
+bob
+diana
+REQUEST frank
+COMPETITION 2
+harry
+frank
+REQUEST charlie
+END
