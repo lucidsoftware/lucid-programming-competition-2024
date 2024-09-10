@@ -1,4 +1,4 @@
-from collections import defaultdict
+# This solution is not fast enough
 
 class Node:
     def __init__(self, value):

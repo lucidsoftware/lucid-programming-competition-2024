@@ -30,6 +30,7 @@ The first line of input will contain 2 positive integers, D (the number of dance
 * Dancer names are alphanumeric with no whitespace
 * Dancer names will be unique
 * Moves are alphanumeric with no whitespace
+* Each dance routine will not exceed 1000 moves
 
 # Output
 

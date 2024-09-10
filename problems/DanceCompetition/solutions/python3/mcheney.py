@@ -7,6 +7,8 @@ for d in range(D):
     line = input().split(" ")
     name = line[0]
     seq = []
+    if len(line[1:]) > 1000:
+        exit(1)
     for move in line[1:]:
         seq.append(move)
         if len(seq) == N:
