@@ -1,1 +1,1 @@
-../../solutions/python3bhintze/main.py
+../../solutions/python3/bhintze.py
