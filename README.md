@@ -46,3 +46,12 @@ On Fedora/RHEL, something like this:
 sudo dnf install colordiff
 ```
 On Windows or Mac, I have no foggy clue how to install colordiff. If anyone cares, feel free to add a page for that.
+
+
+## Generating the test cases zip
+
+To generate the zip files for all problems in the HackerRank testcases.zip format, run this `make` command from the root of the repo. The created zip files can be found under `<repo root>/zips`
+
+```
+make zip
+```

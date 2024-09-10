@@ -23,14 +23,10 @@ test-%:
 	done
 
 TESTS := $(shell echo problems/*/tests)
-.PHONY: zip-tests
-zip-tests: $(TESTS:=.zip)
 
-%/tests.zip: zip-tests.py
-	(echo $@: $*/tests/*.in $*/tests/*.out; echo $*/tests/*.in $*/tests/*.out :) > $@.dep
-	shopt -s nullglob; ./$< --input $*/tests/*.in --output $*/tests/*.out > $@
-
--include $(wildcard problems/*/tests.zip.dep)
+.PHONY: zip
+zip: zip
+	python3 zipup.py
 
 %.html: %.md convert.html.erb
 	ruby -rerb -rnet/http -e 'puts ERB.new(File.read "convert.html.erb").result' < $< > $@
