@@ -16,8 +16,8 @@ Coach Erika is a world-renowned gymnast, and now she shares her talents with oth
 
 # Constraints
 
-- The number of available training sessions is between $1 \leq S \leq 10_000$
-- The number of athlete applicants is between is between $1 \leq A \leq 10_000$
+- The number of available training sessions is between $1 \leq S \leq 10^6$
+- The number of athlete applicants is between is between $1 \leq A \leq 10^5$
 - Coach Erika may choose to train none, some, or all of the applicants, so long as the sum of their trainings $\sum X_b$ does not exceed her available sessions $S$.
 - Coach Erika will not partially train any athlete.
 - Each training session is one-on-one. Athletes do not share the coach's time.
