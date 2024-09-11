@@ -6,6 +6,7 @@
 *.swp
 *.iml
 *.bin
+*.log
 .idea
 .npm
 .npm-install
