@@ -1,0 +1,3 @@
+#!/bin/bash
+rustc $(dirname $0)/rust/solution.rs
+$(dirname $0)/rust/solution

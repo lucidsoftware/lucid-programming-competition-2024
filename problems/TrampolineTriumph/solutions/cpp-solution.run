@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ -std=c++17 $(dirname $0)/cpp/solution.cpp -o $(dirname $0)/cpp/solution.bin
+$(dirname $0)/cpp/solution.bin
