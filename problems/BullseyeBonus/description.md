@@ -5,11 +5,11 @@ After a normal round of archery at Lucid's summer games, each archer gets a chan
 All $N$ archers who are competing are placed in a line.
 They each start with a (possibly negative) integer number of points, which is determined by how well they did during the previous round.
 
-Whenever an archer at some one-indexed position $x$ hits a bullseye, they get to choose:
+Whenever an archer at some one-indexed position $x$ hits a bullseye, they get to choose both of the following:
 - Another archer, denoted by a one-indexed position $y$
-- A range of archers, denoted by $[l,r]$ inclusively
+- A contiguous subarray $A$ of archers who are competing in the bonus round. This is defined by two indices $l$ and $r$, which represent the inclusive left and right bounds of the subarray $[l,r]$.
 
-Suppose the average score, after being rounded down to the nearest integer, within this range of archers is $k$.
+Suppose the average score within the subarray $A$, after being rounded down to the nearest integer, is $k$.
 The archer who fired the bullseye (at position $x$) gains $k$ points and the archer at position $y$ loses $k$ points.
 
 As the scorekeeper, it is your job to keep track of the scores and determine a victor at the end of the event.
@@ -33,12 +33,12 @@ For each bullseye event, the input will be provided as follows:
 ```
 - $x$ is the one-indexed position of the archer who shot the bullseye, who will gain $k$ points
 - $y$ is the one-indexed position of the archer called out by the shooting archer, who will lose $k$ points
-- $l$ and $r$ represent the inclusive bounds of the range of archers whose scores are used to calculate $k$, the floor of the average score within the range
+- $l$ and $r$ represent the inclusive bounds of the contiguous subarray of archers whose scores are used to calculate $k$, the floor of the average score within the subarray
 
 # Constraints
-* The number of archers $N$ is between $5 \leq N \leq 10^6$
+* The number of archers $N$ is between $5 \leq N \leq 10^5$
 * The number of bullseye events $M$ is between $1 \leq M \leq 10^5$
-* For any archer $i$, the archer's initial score $s_i$ will be between $-10 \leq s_i \leq 10$
+* For any archer $i$, the archer's initial score $S_i$ will be between $-10 \leq S_i \leq 10$
 
 # Output
 Output a single number indicating the one-indexed position of the archer with the highest score at the end of the game.
