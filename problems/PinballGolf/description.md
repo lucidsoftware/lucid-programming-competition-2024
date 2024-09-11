@@ -26,6 +26,7 @@ Data about each flipper follows. For each flipper, the following lines are given
 - There's no vertical displacement - the flippers hit the ball strictly horizontally.
 - There is never a displacement of 0.
 - When the ball lands after hitting a flipper, **it's guaranteed that it will not land onto another flipper.**
+- The hole will always be below all the flippers.
 
 ## Example input
 A visualization for this input can be seen [here](https://i.imgur.com/vhJkJyd.png)!
