@@ -1,4 +1,3 @@
-# TODO: Make more test cases, verify DP solution
 # Gymnastics Routine Maker
 
 You are a gymnast who is trying to develop the perfect routine to guarantee the gold this year.
