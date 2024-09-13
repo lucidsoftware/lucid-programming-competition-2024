@@ -55,3 +55,28 @@ if __name__=="__main__":
     print(get_fastest_time(fastest_swimmers))
     # Brute force approach - O(n^4)
     # print(get_fastest_time(swimmers))
+
+
+
+'''
+Chatgpt naive solution
+
+import itertools
+
+def fastest_relay_team(times):
+    n = len(times)
+    min_time = float('inf')
+    
+    for perm in itertools.permutations(range(n), 4):
+        total_time = sum(times[perm[i]][i] for i in range(4))
+        min_time = min(min_time, total_time)
+    
+    return min_time
+
+# Input
+n = int(input())
+times = [list(map(int, input().split())) for _ in range(n)]
+
+# Output
+print(fastest_relay_team(times))
+'''
