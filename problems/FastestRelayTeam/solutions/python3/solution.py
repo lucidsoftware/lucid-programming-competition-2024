@@ -19,7 +19,7 @@ def insert_swimmer(swimmer, fastest_for_stroke):
         if swimmer[1] <= fastest_for_stroke[i][1]:
             fastest_for_stroke.insert(i, swimmer)
             return
-        elif i == 3:
+        elif i == 4:
             return
     fastest_for_stroke.append(swimmer)
 
@@ -39,7 +39,7 @@ if __name__=="__main__":
         swimmers.append(swimmer)
 
     # Condense down to 16 fastest swimmers - O(n)
-    fastest_for_strokes = [[]]
+    fastest_for_strokes = []
     fastest_swimmers_list = []
     for i in range(4):
         fastest_for_strokes.append(populate_fastest_for_stroke(swimmers, i)[:4])
@@ -49,7 +49,9 @@ if __name__=="__main__":
     fastest_swimmers = []
     for i in range(len(swimmers)):
         if i in fastest_swimmers_indexes:
-            fastest_swimmers.append(swimmers[i])    
+            fastest_swimmers.append(swimmers[i])
     
     # Try every combination - O(4^4) - O(1)
     print(get_fastest_time(fastest_swimmers))
+    # Brute force approach - O(n^4)
+    # print(get_fastest_time(swimmers))
