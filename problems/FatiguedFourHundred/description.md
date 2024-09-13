@@ -75,19 +75,21 @@ The times are always given in the exact order of Butterfly, Backstroke, Breastst
 ```
 <Number of Swimmers>
 <Butterfly 100m time> <Backstroke 100m time> <Breaststroke 100m time> <Freestyle 100m time>
+<Butterfly 100m time> <Backstroke 100m time> <Breaststroke 100m time> <Freestyle 100m time>
+...
 ```
 
-The `<time>` inputs are given in number of seconds rounded to two decimal places.
+The `<time>` inputs are given in number of seconds.
 Our input always includes exactly two digits to the right of the decimal, for example: `60.00`, `75.31`, `115.20`.
 
 # Constraints
 * The number of swimmers will always be between 1 and 50000
-* The input times in seconds will be between 1.00 and 1000.00
+* The input times in seconds will always be between 1.00 and 1000.00
 
 # Output
 For each swimmer, you should output the four recommended effort levels for each stroke followed by the predicted fastest possible time they could swim the 400 IM using the predictive model described above.
-The effort level must be one of these numbers: `{75, 80, 85, 90, 95, 100}`. You should omit the `%` sign.
-The predicted time should be measured in seconds and rounded to the nearest _tenth_ of a second (a single digit to the right of the decimal).
+The effort level must be one of these numbers: `{75, 80, 85, 90, 95, 100}` (You should omit the `%` sign).
+The predicted time should be measured in seconds and rounded to the nearest _tenth_ of a second (a single digit to the right of the decimal). You should always include a single digit to the right of the decimal.
 
 ```
 <Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
@@ -95,6 +97,29 @@ The predicted time should be measured in seconds and rounded to the nearest _ten
 <Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
 <Butterfly effort level> <Backstroke effort level> <Breaststroke effort level> <Freestyle effort level> <Predicted time>
 ...
+```
+
+### Hints for formatting the output time
+These code snippets are provided as-is with no warranty. Swim at your own risk; no lifeguard on duty.
+
+**Python**
+```
+"{:.1f}".format(time)
+```
+
+**C**
+```
+printf("%.1f", time);
+```
+
+**Rust**
+```
+print!("{:.1}", time);
+```
+
+**Java**
+```
+System.out.printf("%.1f", time);
 ```
 
 # Examples
