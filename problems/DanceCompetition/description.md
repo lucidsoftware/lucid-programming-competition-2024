@@ -11,7 +11,7 @@ For example, consider two dancers named `Alice` and `Bob`, and their respective 
 
 In this case, `Alice` and `Bob` are copying each other, since they have a run of 4 moves in common (Spin - Somersault - Jump - Handstand). If N were set to 5 instead, they would not be copying, since there is no run of 5 identical moves between their routines.
 
-Given a list of dancers and their routines, return a list of all the dancers that are copying.
+Given a list of dancers and their routines, return the number of dancers that are copying.
 
 # Input
 
@@ -21,7 +21,7 @@ The first line of input will contain 2 positive integers, D (the number of dance
 <D> <N>
 <dancer name> <move> <move> ...
 <dancer name> <move> <move> ...
-... 
+...
 ```
 
 # Constraints
