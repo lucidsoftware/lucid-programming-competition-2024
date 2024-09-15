@@ -1,0 +1,4 @@
+#!/bin/bash
+g++ -std=c++17 $(dirname $0)/cpp/afraser-naive-timeout.cpp -o $(dirname $0)/cpp/afraser-naive-timeout.bin
+$(dirname $0)/cpp/afraser-naive-timeout.bin
+rm $(dirname $0)/cpp/afraser-naive-timeout.bin
