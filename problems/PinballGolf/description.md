@@ -16,7 +16,7 @@ First, you're given a single line `N L` with the integer $N$ (number of flippers
 
 Data about each flipper follows. For each flipper, the following lines are given:
 - One line with `x y k` where $(x, y)$ is the coordinate of the flipper and $k$ is the number of possible displacement values
-- One lines follows with:
+- Another line follows with:
     - `d_1 d_2 ... d_k` where $d_i$ is the displacement value $i$ ranging from 1 to $k$. These are given in no particular order, and separated by a space.
     - If $d_i$ is positive, that denotes the right direction, and if it's negative, it denotes left. 
     - **All displacement values have an equal chance** (i.e. the probability that this flipper will hit the ball by $d_i$ is $1/k$, for all $i$).
