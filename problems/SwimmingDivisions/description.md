@@ -21,12 +21,13 @@ You will be given all the competition data, in chronological order. In between t
 # Input
 The input starts with the integer $N$ (number of competitors). $N$ lines follow, with the names of each competitor on each line (competitor names only consist of the lowercase alphabet, a-z).
 <br>
-Following the names, the rest of the input happens in chronological order. One of the two events occurs:
+Following the names, the rest of the input happens in chronological order. One of the 3 events occurs:
 1.  A competition takes place, in which the input is:
     - A line `COMPETITION [M]` where $M$ is an integer denoting the number of participants in this competition
     - $M$ lines follow with the names of the participants of this competition on each line. The first name is the winner, all the others are losers, in no particular order.
 2. A participant requests who the top-ranker is in their division, **at this point in time**
     - A single line with the string `REQUEST [name]` where `name` is the competitor who made the request.
+3. The swimming competitions end. A single line with the word `END`, denoting there is no more input to be expected.
 
 ## Example input
 ```
@@ -72,7 +73,7 @@ END
 - $N \leq 10^5$
 - The total number of requests will be at most $10^6$
 - The sum of all competition sizes (i.e. number of competitors for each competition) is at most $10^7$
-- 
+- Requests will only be made by people who have previously competed in a competition at some point
 
 # Output
 On each line, output the response to each request (i.e. the name of the top-ranked competitor in the requestor's division **at the moment of the request**).
