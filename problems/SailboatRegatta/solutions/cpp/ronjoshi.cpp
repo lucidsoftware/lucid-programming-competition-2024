@@ -122,7 +122,7 @@ int main() {
                     x + new_vx,
                     y + new_vy,
                     !raised,
-                    k
+                    k - 1
                 }
             });
         }

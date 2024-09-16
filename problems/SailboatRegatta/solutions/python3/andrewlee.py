@@ -44,7 +44,9 @@ def solve_sailboat_regatta(
                     vx + wind_vx * new_sail_status,
                     vy + wind_vy * new_sail_status,
                 )
-                neighbors.append((new_x, new_y, new_vx, new_vy, new_sail_status, K, time + 1))
+                neighbors.append(
+                    (new_x, new_y, new_vx, new_vy, new_sail_status, K - 1, time + 1)
+                )
 
         return neighbors
 
