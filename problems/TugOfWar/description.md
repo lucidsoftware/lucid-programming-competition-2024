@@ -9,14 +9,14 @@ Your team will win the tug of war if all the participants have a combined pullin
 
 # Input
 
-You will be given input on 3 separate lines, with list input values separated by a space.
-1. A list of length `N` of the pulling power, `D`, of each of the participants on your team
-2. A list of length `N` denoting the positional multiplier, `M`, for each position on the rope
-3. The pulling power for the opposing team, `P`. 
+You will be given 3 lines of input. The first line will have an integer, `N`, and a floating point value, `P`. The second line is a space separated list of floating point values, `D`. The third line is a space separated list of floating point values, `M`.
+1. An integer `N`, denoting the number of participants on your team, and a floating point value `P`, denoting the total pulling power of the opposing team.
+2. A list of length `N` of the pulling power, `D`, of each of the participants on your team
+3. A list of length `N` denoting the positional multiplier, `M`, for each position on the rope
 ```
-<D_0>, <D_1>, <D_2> ...
-<P_0>, <P_1>, <P_2> ...
-<X>
+<N> <P>
+<D_0> <D_1> <D_2> ...
+<P_0> <P_1> <P_2> ...
 ```
 
 # Constraints

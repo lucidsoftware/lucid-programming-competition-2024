@@ -1,8 +1,8 @@
 import itertools
 
+n, power_to_beat = map(eval, input().split())
 powers = [float(ea) for ea in input().split(" ")]
 multipliers = [float(ea) for ea in input().split(" ")]
-power_to_beat = float(input())
 
 successful_combinations = 0
 for lineup in list(itertools.permutations(powers, len(powers))):
