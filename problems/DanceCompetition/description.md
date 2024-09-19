@@ -25,9 +25,10 @@ The first line of input will contain 2 positive integers, D (the number of dance
 ```
 
 # Constraints
-* 2 <= D <= 1000 ???
-* 1 <= N <= 1000 ???
-* Dancer names are alphanumeric with no whitespace
+* 2 <= D <= 1000
+* 1 <= N <= 1000
+* Dancer names and moves are alphanumeric with no whitespace
+* Dancer names and moves are no longer than 10 characters each
 * Dancer names will be unique
 * Moves are alphanumeric with no whitespace
 * Each dance routine will not exceed 1000 moves
