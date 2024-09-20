@@ -22,9 +22,9 @@ Following the node list, you will receive another integer on a single line repre
 ```
 
 # Constraints
-* The number of nodes will always be between 5 and 10000 (inclusive)
-* The number of obstacles will be between 5 and 50000 (inclusive)
-* The number of seconds to complete an obstacle will always be between 1 and 50 (inclusive)
+* The number of nodes will always be between 3 and 10000 (inclusive)
+* The number of obstacles will be between 3 and 50000 (inclusive)
+* The original number of seconds to complete an obstacle will always be between 1 and 50 (inclusive)
 * Node names are always lowercase alphanumeric characters, with no spaces (or anything else that isn't alphanumeric)
 * There will never be two obstacles that connect the same two nodes.
 * There will never be two unique paths that can complete the course in the minimum time.
