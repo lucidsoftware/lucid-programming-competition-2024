@@ -27,10 +27,10 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int[] days = Arrays.stream(scan.next().split(","))
+        int[] days = Arrays.stream(scan.nextLine().split("\\s+"))
                 .mapToInt(Integer::parseInt)
                 .toArray();
-        int[] costs = Arrays.stream(scan.next().split(","))
+        int[] costs = Arrays.stream(scan.nextLine().split("\\s+"))
                 .mapToInt(Integer::parseInt)
                 .toArray();
 

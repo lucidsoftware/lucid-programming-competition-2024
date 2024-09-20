@@ -1,8 +1,7 @@
 from collections import deque
 
-# should we be consistent and use space as delimiter?
-days = [int(day) for day in input().split(",")]
-costs = [int(cost) for cost in input().split(",")]
+days = [int(day) for day in input().split()]
+costs = [int(cost) for cost in input().split()]
 
 seven, thirty = deque(), deque()
 total = 0
