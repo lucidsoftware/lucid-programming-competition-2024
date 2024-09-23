@@ -19,28 +19,45 @@ fn get_local_maxima(mut l: f64, mut r: f64, factor: f64) -> f64 {
     l
 }
 
-fn get_score(milestone: &[f64], factor: f64) -> f64 {
+fn get_jump_distance(milestone: &[f64], factor: f64) -> f64 {
     let local_maxima = get_local_maxima(milestone[0], milestone[1], factor);
-    let local_maxima_value = get_position(local_maxima, factor);
-    if local_maxima_value >= milestone[2] {
-        local_maxima_value
-    } else {
-        0.0
+    get_position(local_maxima, factor)
+}
+
+fn get_scores(milestones: &[Vec<f64>], factors: &[f64]) -> Vec<i32> {
+    let players_count = factors.len();
+    let mut scores = vec![0; players_count];
+    for milestone in milestones {
+        let mut max_jump_distance = None;
+        let mut winner = None;
+        for (i, &factor) in factors.iter().enumerate() {
+            let jump_distance = get_jump_distance(milestone, factor);
+            if max_jump_distance.is_none() || jump_distance > max_jump_distance.unwrap() {
+                max_jump_distance = Some(jump_distance);
+                winner = Some(i);
+            } else if jump_distance == max_jump_distance.unwrap() {
+                println!("Error: multiple winners");
+            }
+        }
+        if let Some(winner) = winner {
+            scores[winner] += 1;
+        }
     }
+    scores
 }
 
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
 
-    let players_count: usize = lines.next().unwrap().unwrap().trim().parse().unwrap();
+    let _players_count: usize = lines.next().unwrap().unwrap().trim().parse().unwrap();
     let factors: Vec<f64> = lines.next().unwrap().unwrap()
         .split_whitespace()
         .map(|s| s.parse().unwrap())
         .collect();
 
     let milestones_count: usize = lines.next().unwrap().unwrap().trim().parse().unwrap();
-    let mut milestones: Vec<Vec<f64>> = Vec::with_capacity(milestones_count);
+    let mut milestones = Vec::new();
     for _ in 0..milestones_count {
         let milestone: Vec<f64> = lines.next().unwrap().unwrap()
             .split_whitespace()
@@ -49,21 +66,11 @@ fn main() {
         milestones.push(milestone);
     }
 
-    let mut scores = vec![0.0; players_count];
-    for milestone in &milestones {
-        for i in 0..players_count {
-            scores[i] += get_score(&milestone, factors[i]);
-        }
-    }
+    let scores = get_scores(&milestones, &factors);
+    let mut sorted_scores: Vec<(usize, i32)> = scores.into_iter().enumerate().collect();
+    sorted_scores.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
 
-    let mut sorted_scores: Vec<(usize, f64)> = (0..players_count)
-        .map(|i| (i + 1, scores[i]))
-        .collect();
-
-    sorted_scores.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
-
-    for (player_index, score) in sorted_scores {
-        println!("{}", player_index);
-        println!("{:.6}", score);
+    for (i, score) in sorted_scores {
+        println!("{} {}", i + 1, score);
     }
 }

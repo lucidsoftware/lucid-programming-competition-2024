@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <iomanip>
 #include <cmath>
 using namespace std;
 
@@ -24,10 +23,31 @@ double get_local_maxima(double l, double r, double factor) {
     return l;
 }
 
-double get_score(const vector<double>& milestone, double factor) {
+double get_jump_distance(const vector<double>& milestone, double factor) {
     double local_maxima = get_local_maxima(milestone[0], milestone[1], factor);
-    double local_maxima_value = get_position(local_maxima, factor);
-    return local_maxima_value >= milestone[2] ? local_maxima_value : 0;
+    return get_position(local_maxima, factor);
+}
+
+vector<int> get_scores(const vector<vector<double>>& milestones, const vector<double>& factors) {
+    int players_count = factors.size();
+    vector<int> scores(players_count, 0);
+    for (const auto& milestone : milestones) {
+        double max_jump_distance = -1;
+        int winner = -1;
+        for (int i = 0; i < players_count; ++i) {
+            double jump_distance = get_jump_distance(milestone, factors[i]);
+            if (max_jump_distance == -1 || jump_distance > max_jump_distance) {
+                max_jump_distance = jump_distance;
+                winner = i;
+            } else if (jump_distance == max_jump_distance) {
+                cerr << "Error: multiple winners" << endl;
+            }
+        }
+        if (winner != -1) {
+            scores[winner] += 1;
+        }
+    }
+    return scores;
 }
 
 int main() {
@@ -37,34 +57,30 @@ int main() {
     for (int i = 0; i < players_count; ++i) {
         cin >> factors[i];
     }
-    
+
     int milestones_count; cin >> milestones_count;
     
-    vector<vector<double>> milestones(milestones_count, vector<double>(3));
+    vector<vector<double>> milestones(milestones_count, vector<double>(2));
     for (int i = 0; i < milestones_count; ++i) {
-        cin >> milestones[i][0] >> milestones[i][1] >> milestones[i][2];
+        cin >> milestones[i][0] >> milestones[i][1];
     }
-    
-    vector<double> scores(players_count, 0);
-    for (const auto& milestone : milestones) {
-        for (int i = 0; i < players_count; ++i) {
-            scores[i] += get_score(milestone, factors[i]);
-        }
-    }
-    
-    vector<pair<int, double>> sorted_scores(players_count);
+
+    vector<int> scores = get_scores(milestones, factors);
+    vector<pair<int, int>> sorted_scores(players_count);
     for (int i = 0; i < players_count; ++i) {
         sorted_scores[i] = {i + 1, scores[i]};
     }
-    
+
     sort(sorted_scores.begin(), sorted_scores.end(), [](const auto& a, const auto& b) {
-        return b.second < a.second;
+        if (a.second != b.second) {
+            return a.second > b.second;
+        }
+        return a.first < b.first;
     });
-    
+
     for (const auto& score : sorted_scores) {
-        cout << score.first << endl;
-        cout << fixed << setprecision(6) << score.second << endl;
+        cout << score.first << " " << score.second << endl;
     }
-    
+
     return 0;
 }
