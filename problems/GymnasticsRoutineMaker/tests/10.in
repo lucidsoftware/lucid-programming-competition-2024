@@ -1,0 +1,12 @@
+11
+a 2 1 start a
+b 1 1 start
+c 1 1 b
+d 1 1 c
+e 1 1 d
+f 1 1 e
+g 1 1 f
+h 1 1 g
+i 10 100 h
+j 1 1 i
+k 1 1 j

@@ -1,0 +1,48 @@
+16
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+ll
+mm
+nn
+oo
+pp
+COMPETITION 3
+cc
+aa
+bb
+REQUEST bb
+COMPETITION 3
+dd
+cc
+ee
+REQUEST aa
+COMPETITION 5
+ee
+ff
+ii
+hh
+gg
+REQUEST cc
+COMPETITION 4
+kk
+jj
+ll
+mm
+REQUEST ll
+COMPETITION 4
+oo
+mm
+pp
+nn
+REQUEST ll
+REQUEST aa
+END

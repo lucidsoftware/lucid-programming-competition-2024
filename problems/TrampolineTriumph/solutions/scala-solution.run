@@ -1,0 +1,2 @@
+#!/bin/bash
+scala -savecompiled $(dirname $0)/scala/solution.scala

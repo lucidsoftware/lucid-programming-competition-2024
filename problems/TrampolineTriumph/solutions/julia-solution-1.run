@@ -1,0 +1,2 @@
+#!/bin/bash
+julia $(dirname $0)/julia/solution-1.jl

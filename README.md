@@ -1,4 +1,4 @@
-# Lucid Programming Competition 2023
+# Lucid Programming Competition 2024
 
 ## Adding a Problem
 Create a new folder for your problem, as in `problems/yourProblemName`
@@ -25,13 +25,7 @@ Your input and expected outputs should go inside of the `tests` folder. The file
 
 ### description.md
 
-Each problem requires a clear description. Typically the descriptions follow the following rough format:
-* Introducing the Problem: Explain the backstory of the problem and give the reader an idea of what problem needs to be solved.
-* Input / Output: You should explain clearly the format of the input and the expected output format.
-  * Make certain that your output format is completely unambiguous. For every input, there should be **exactly** one correct output. Common tricks include adding up numbers to a single sum or ordering the output in ascending order. This doesn't always work, so just make sure there is only one correct answer.
-  * If you have multiple lines of input, it can simplify things for some students if the first line of input tells them how many lines of input to expect, especially if they are using terrible languages like C++ (we've learned this from years past)
-* Constraints: Explain how big the input size can be, how big the numbers can get, and any critical disambiguating rules.
-
+* Please refer to the `Problem Template` page in Confluence (link bookmarked in our channel Slack) for the most up to date instructions.
 
 ## Running Tests
 
@@ -52,3 +46,12 @@ On Fedora/RHEL, something like this:
 sudo dnf install colordiff
 ```
 On Windows or Mac, I have no foggy clue how to install colordiff. If anyone cares, feel free to add a page for that.
+
+
+## Generating the test cases zip
+
+To generate the zip files for all problems in the HackerRank testcases.zip format, run this `make` command from the root of the repo. The created zip files can be found under `<repo root>/zips`
+
+```
+make zip
+```

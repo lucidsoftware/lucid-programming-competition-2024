@@ -6,6 +6,7 @@
 *.swp
 *.iml
 *.bin
+*.log
 .idea
 .npm
 .npm-install
@@ -17,6 +18,7 @@ leaderboard/*.js
 .DS_Store
 .vscode
 go.work
+__pycache__/
 
 # Scala
 .metals

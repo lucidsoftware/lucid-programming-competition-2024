@@ -1,0 +1,3 @@
+#!/bin/bash
+javac $(dirname $0)/java/solution/Solution.java
+java -cp $(dirname $0)/java/solution Solution
